@@ -1,0 +1,92 @@
+package DemoclassMavenProject.Demoartifact1;
+
+import static org.junit.Assert.*;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import javax.print.DocFlavor.INPUT_STREAM;
+
+import org.testng.annotations.Test;
+
+
+
+public class DemoTest extends Democlass{
+	
+	@Test
+	public void test_is_triangle_1() {
+		assertTrue(Democlass.isTriangle(3,4,5));
+		
+	}
+	@Test
+	public void test_is_triangle_2() {
+		assertTrue(Democlass.isTriangle(5,12,13));
+		
+	}
+	
+	@Test
+	public void test_is_triangle_3() {
+		assertTrue(Democlass.isTriangle(5,13,12));
+		
+	}
+	
+	@Test
+	public void test_is_triangle_4() {
+		assertTrue(Democlass.isTriangle(12,5,13));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_1() {
+		assertFalse(Democlass.isTriangle(13,7,5));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_2() {
+		assertFalse(Democlass.isTriangle(5,9,3));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_3() {
+		assertFalse(Democlass.isTriangle(1,2,-1));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_4() {
+		assertFalse(Democlass.isTriangle(13,0,5));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_5() {
+		assertFalse(Democlass.isTriangle(13,7,0));
+		
+	}
+	
+	@Test
+	public void test_is_NOTtriangle_6() {
+		assertFalse(Democlass.isTriangle(3.5,7.0,15.0)); //Not a triangle with decimal numbers input
+		
+	}
+	/*@Test
+	public void test_main_program() {
+		String input="1/n";
+		ByteArrayInputStream inp = new ByteArrayInputStream(input.getBytes());
+		System.setIn(inp);
+		
+		ByteArrayOutputStream out1 = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out1));
+		
+		String consoleOut = "Enter Side 1 = \n";
+		consoleOut += "Enter side 2 = \n";
+		consoleOut += "Enter side3 = \n";
+		consoleOut +="This is a TRIANGLE";
+		
+		assertEquals(consoleOut,out1.toString());
+		} */
+}
+
